@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .box-shadow {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+  .bg-gradient {
+    background: linear-gradient(
+      90deg,
+      hsl(214deg 100% 59%) 0%,
+      hsl(219deg 100% 66%) 4%,
+      hsl(221deg 100% 71%) 7%,
+      hsl(223deg 100% 76%) 11%,
+      hsl(225deg 100% 79%) 15%,
+      hsl(226deg 100% 83%) 19%,
+      hsl(227deg 100% 86%) 24%,
+      hsl(228deg 100% 89%) 28%,
+      hsl(229deg 100% 92%) 33%,
+      hsl(230deg 100% 95%) 38%,
+      hsl(231deg 100% 97%) 44%,
+      hsl(0deg 0% 100%) 50%,
+      hsl(191deg 88% 97%) 56%,
+      hsl(191deg 88% 94%) 61%,
+      hsl(191deg 89% 91%) 66%,
+      hsl(191deg 89% 88%) 71%,
+      hsl(191deg 89% 85%) 76%,
+      hsl(191deg 89% 81%) 80%,
+      hsl(191deg 89% 77%) 84%,
+      hsl(190deg 90% 73%) 88%,
+      hsl(190deg 90% 68%) 92%,
+      hsl(189deg 91% 62%) 96%,
+      hsl(187deg 96% 49%) 100%
+    );
+  }
+}
+
+@font-face {
+  font-family: "Pretendard-black";
+  font-weight: 400;
+  src: url("/fonts/Pretendard-Black.woff") format("woff");
+}
+@font-face {
+  font-family: "Jamsil-bold";
+  font-weight: 400;
+  src: url("/fonts/The-Jamsil-OTF-Bold.otf") format("opentype");
+}
