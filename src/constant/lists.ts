@@ -26,5 +26,42 @@ export const LIST = [
   {
     id: 7,
     title: "REACT NATIVE"
+  },
+  {
+    id: 8,
+    title: "NETWORK"
+  },
+  {
+    id: 9,
+    title: "BLOG"
+  },
+  {
+    id: 10,
+    title: "NIHONGGO"
+  },
+  {
+    id: 11,
+    title: "STUDY"
+  },
+  {
+    id: 12,
+    title: "ALGORITHM"
+  },
+  {
+    id: 13,
+    title: "TANSTACK-QUERY"
+  },
+  {
+    id: 14,
+    title: "DESIGN"
+  },
+  {
+    id: 15,
+    title: "CSS"
+  },
+  {
+    id: 16,
+    title: "ERROR"
   }
+
 ]
