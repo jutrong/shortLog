@@ -56,14 +56,3 @@ body {
     );
   }
 }
-
-@font-face {
-  font-family: "Pretendard-black";
-  font-weight: 400;
-  src: url("/fonts/Pretendard-Black.woff") format("woff");
-}
-@font-face {
-  font-family: "Jamsil-bold";
-  font-weight: 400;
-  src: url("/fonts/The-Jamsil-OTF-Bold.otf") format("opentype");
-}
