@@ -7,14 +7,6 @@ export default function Home() {
   return (
     <main className="w-screen h-full">
       <Header />
-      <div>
-        {posts.map((post) => (
-          <div key={post.id}>
-            <p>{post.title}</p>
-            <p>{post.date}</p>
-          </div>
-        ))}
-      </div>
     </main >
   );
 }
