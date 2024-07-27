@@ -12,6 +12,7 @@ const config: Config = {
       colors: {
         black: "#000000", 
         red: "#2E87FF",
+        primary: "#19194d",
       }
     },
   },

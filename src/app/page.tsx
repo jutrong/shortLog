@@ -1,12 +1,23 @@
 import Header from "@/components/Header";
+import PostItem from "@/components/PostItem";
+import TabMenu from "@/components/TabMenu";
+import Tags from "@/components/Tags";
 import { getSortedPostsData } from "@/lib/posts";
 
 export default function Home() {
   const posts = getSortedPostsData();
+  console.log(posts);
 
   return (
-    <main className="w-screen h-full">
-      <Header />
+    <main className="w-full h-full flex justify-center py-10">
+      <div className="w-[1000px]">
+        <Header />
+        <Tags />
+        <TabMenu />
+        {posts.map((post) => (
+          <PostItem key={post.id} post={post} />
+        ))}
+      </div>
     </main >
   );
 }
