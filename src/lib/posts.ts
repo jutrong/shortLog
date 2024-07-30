@@ -15,6 +15,7 @@ export function getSortedPostsData() {
     const fullPath = path.join(postsDirectory, fileName);
     const fileContents = fs.readFileSync(fullPath, 'utf8');
 
+    
     const matterResult = matter(fileContents);
 
     const blogPost = {
@@ -43,6 +44,7 @@ export async function getPostData(id:string) {
     .process(matterResult.content);
   const contentHtml = processedContent.toString();
 
+  
   const blogPost = {
     id,
     title: matterResult.data.title,

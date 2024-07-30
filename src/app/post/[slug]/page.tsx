@@ -1,4 +1,6 @@
 import { getPostData } from "@/lib/posts";
+import { MDXRemote } from "next-mdx-remote";
+import { sources } from "next/dist/compiled/webpack/webpack";
 
 
 const DetailPost = async ({ params }: any) => {
@@ -9,7 +11,8 @@ const DetailPost = async ({ params }: any) => {
       <p>
         {postData.blogPost.content}
       </p>
-      <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+      <div>
+      </div>
     </div>
   );
 }
