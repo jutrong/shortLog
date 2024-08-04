@@ -6,7 +6,12 @@ const nextConfig = {
 };
 
 const withMDX = createMDX({
-  // 여기에 마크다운 플러그인 추가
+  xtension: /\.mdx?$/,
+  options: {
+    providerImportSource: "@mdx-js/react",
+    remarkPlugins: [],
+    rehypePlugins: [],
+  },
 });
 
 export default withMDX(nextConfig);

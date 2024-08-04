@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export default function Home() {
   const posts = getSortedPostsData();
-
+  console.log(posts)
   return (
     <main className="w-full h-full flex justify-center py-10">
       <div className="w-[1000px]">

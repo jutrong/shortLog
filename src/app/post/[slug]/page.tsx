@@ -1,17 +1,14 @@
 import { getPostData } from "@/lib/posts";
-import { MDXRemote } from "next-mdx-remote";
-import { sources } from "next/dist/compiled/webpack/webpack";
+import ReactMarkDown from 'react-markdown';
 
 
 const DetailPost = async ({ params }: any) => {
   const postData = await getPostData(params.slug);
 
   return (
-    <div>
-      <p>
-        {postData.blogPost.content}
-      </p>
+    <div className="text-black">
       <div>
+        <ReactMarkDown className="prose">{postData.blogPost.content}</ReactMarkDown>
       </div>
     </div>
   );
