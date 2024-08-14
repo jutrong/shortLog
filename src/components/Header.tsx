@@ -1,11 +1,15 @@
 "use client"
 
+import Link from "next/link";
+
 const Header = () => {
   return (
     <header className="w-full h-24">
       <div className="w-full h-full px-20 text-black flex justify-between items-center">
-        <h1 className="text-4xl">JULOG</h1>
-        <p className="text-2xl">写.真</p>
+        <Link href="/">
+          <h1 className="text-4xl cursor-pointer">JULOG</h1>
+        </Link>
+        <p className="text-2xl cursor-pointer">写.真</p>
       </div>
     </header>
   )
