@@ -13,9 +13,15 @@ const config: Config = {
         black: "#000000", 
         red: "#2E87FF",
         primary: "#19194d",
+      },
+      fontFamily: {
+        UhBeeSe: ["UhBeeSe", "sans-serif"],
+        Seo: ["Seo"],
+        Gowun: ["Gowun"],
+      },
       }
+
     },
-  },
   plugins: [
     require('@tailwindcss/typography'),
   ],

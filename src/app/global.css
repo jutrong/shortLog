@@ -106,3 +106,24 @@ pre [data-line] {
     );
   }
 }
+@font-face {
+  font-family: "UhBeeSe";
+  font-weight: 400;
+  font-style: normal;
+  src: url("/fonts/UhBeeSe_hyun.woff") format("woff");
+}
+@font-face {
+  font-family: "Seo";
+  font-style: normal;
+  src: url("/fonts/seo.ttf") format("ttf");
+}
+@font-face {
+  font-family: "Gowun";
+  font-style: normal;
+  src: url("/fonts/GowunDodum-Regular") format("ttf");
+}
+
+.linenumber {
+  font-size: 8px;
+  margin-right: 20px;
+}
