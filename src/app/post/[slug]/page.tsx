@@ -1,18 +1,14 @@
 import Image from 'next/image';
 import { getPostData } from "@/lib/posts";
-import ReactMarkDown from 'react-markdown';
-import rehypePrism from 'rehype-prism-plus';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
-import SyntaxHighlighter from 'react-syntax-highlighter';
 import Markdown from '@/components/Markdown';
 
 const DetailPost = async ({ params }: any) => {
   const postData = await getPostData(params.slug);
-  console.log(postData.blogPost.content, 'postData');
   return (
     <div className="w-full flex flex-col items-center text-black">
-      <div className="my-10">
+      <div className="my-10 font-Seo">
         <div className='mb-8 cursor-pointer'>
           <Link href="/">
             <Image
@@ -32,7 +28,7 @@ const DetailPost = async ({ params }: any) => {
         </div>
       </div>
       <div className="w-[60%] h-[1px] bg-primary opacity-20" />
-      <div className="w-full  mt-20 ">
+      <div className="w-full  mt-20 font-Gowun leading-10 tracking-wide">
         <Markdown content={postData.blogPost.content}></Markdown>
       </div>
     </div >
