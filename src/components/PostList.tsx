@@ -24,7 +24,7 @@ const PostList = ({ posts }: PostListProps) => {
     setActiveTab(tabName);
   };
 
-
+  console.log(posts);
   return (
     <>
       <TabMenu activeTab={activeTab} setActiveTab={setActiveTab} />
