@@ -3,11 +3,12 @@ import { getPostData } from "@/lib/posts";
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import Markdown from '@/components/Markdown';
+import Giscus from '@/lib/Giscus';
 
 const DetailPost = async ({ params }: any) => {
   const postData = await getPostData(params.slug);
   return (
-    <div className="w-full flex flex-col items-center text-black">
+    <div className="w-full flex flex-col items-center text-black mb-20">
       <div className="my-10 font-Seo">
         <div className='mb-8 cursor-pointer'>
           <Link href="/">
@@ -30,6 +31,9 @@ const DetailPost = async ({ params }: any) => {
       <div className="w-[60%] h-[1px] bg-primary opacity-20" />
       <div className="w-full  mt-20 font-Gowun leading-10 tracking-wide">
         <Markdown content={postData.blogPost.content}></Markdown>
+      </div>
+      <div className='w-full'>
+        <Giscus />
       </div>
     </div >
   );
