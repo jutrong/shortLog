@@ -9,7 +9,7 @@ import remarkRehype from 'remark-rehype';
 import { unified } from "unified";
 import rehypeStringify from "rehype-stringify";
 
-const postsDirectory = path.join('__posts');
+const postsDirectory = path.join(process.cwd(), 'posts');
 
 export function getSortedPostsData() {
   const fileNames = fs.readdirSync(postsDirectory);
