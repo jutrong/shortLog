@@ -1,8 +1,5 @@
-'use client'
-
 import Image from 'next/image';
 import { getPostData } from "@/lib/posts";
-import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import Markdown from '@/components/Markdown';
 import Giscus from '@/lib/Giscus';

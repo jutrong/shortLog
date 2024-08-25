@@ -61,8 +61,6 @@ export async function getPostData(id:string) {
   .use(rehypeStringify)
   .process("`const numbers = [1, 2, 3]{:js}`");
   
-  console.log(String(file), 'file');
-
   const blogPost = {
     id,
     title: matterResult.data.title,
