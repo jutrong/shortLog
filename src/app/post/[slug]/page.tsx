@@ -1,3 +1,5 @@
+'use client'
+
 import Image from 'next/image';
 import { getPostData } from "@/lib/posts";
 import { useRouter } from 'next/navigation';
