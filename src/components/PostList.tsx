@@ -24,14 +24,13 @@ const PostList = ({ posts }: PostListProps) => {
     setActiveTab(tabName);
   };
 
-  console.log(posts);
   return (
     <>
       <TabMenu activeTab={activeTab} setActiveTab={setActiveTab} />
       {
-        filteredPosts.map((post) => (
+        filteredPosts.map((post, index) => (
           <Link href={`/post/${post.id}`}>
-            <PostItem key={post.id} post={post} />
+            <PostItem key={post.date + index} post={post} />
           </Link>
         ))
       }
