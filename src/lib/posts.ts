@@ -44,6 +44,7 @@ export async function getPostData(id:string) {
   const fullPath = path.join(postsDirectory, `${id}.md`);
   const fileContents = fs.readFileSync(fullPath, 'utf8');
   const matterResult = matter(fileContents);
+  
   const processedContent = await remark()
     .use(html)
     .use(remarkParse)
