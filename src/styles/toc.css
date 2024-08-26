@@ -1,0 +1,21 @@
+.toc {
+  margin-bottom: 20px;
+}
+
+.toc ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.toc li {
+  margin-bottom: 5px;
+}
+
+.toc a {
+  text-decoration: none;
+  color: #3498db;
+}
+
+.toc a:hover {
+  text-decoration: underline;
+}

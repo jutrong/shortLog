@@ -3,12 +3,13 @@ import { getPostData } from "@/lib/posts";
 import Link from 'next/link';
 import Markdown from '@/components/Markdown';
 import Giscus from '@/lib/Giscus';
+import Toc from '@/components/Toc';
 
 const DetailPost = async ({ params }: any) => {
   const postData = await getPostData(params.slug);
   return (
     <div className="w-full flex flex-col items-center text-black mb-20">
-      <div className="my-10 font-Seo">
+      <div className="my-10 font-Seo w-[80%] ">
         <div className='mb-8 cursor-pointer'>
           <Link href="/">
             <Image
@@ -27,8 +28,11 @@ const DetailPost = async ({ params }: any) => {
           })}
         </div>
       </div>
-      <div className="w-[60%] h-[1px] bg-primary opacity-20" />
-      <div className="w-full  mt-20 font-Gowun leading-10 tracking-wide">
+      <div className="w-[85%] h-[1px] bg-primary opacity-20" />
+      <div className="w-[80%] mt-20 mb-32 font-Gowun leading-10 tracking-wide relative">
+        <div className='absolute top-0 -right-1/2'>
+          <Toc />
+        </div>
         <Markdown content={postData.blogPost.content}></Markdown>
       </div>
       <div className='w-full'>

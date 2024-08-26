@@ -8,6 +8,10 @@ import remarkParse from 'remark-parse';
 import remarkRehype from 'remark-rehype';
 import { unified } from "unified";
 import rehypeStringify from "rehype-stringify";
+import rehypeSlug from 'rehype-slug';
+import rehypeAutolinkHeadings from 'rehype-autolink-headings';
+import rehypeToc from 'rehype-toc';
+import '../styles/toc.css'
 
 const postsDirectory = path.join(process.cwd(), 'posts');
 
@@ -50,6 +54,10 @@ export async function getPostData(id:string) {
     .use(remarkParse)
     .use(remarkRehype)
     .use(rehypePrettyCode)
+    .use(rehypeSlug)
+    .use(rehypeAutolinkHeadings)
+    .use(rehypeToc, { headings: ['h2', 'h3'], cssClasses: { toc: 'toc' } }) 
+    .use(rehypeStringify)
     .process(matterResult.content)
    
   const contentHtml = processedContent.toString();
