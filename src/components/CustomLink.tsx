@@ -1,31 +1,44 @@
-import React from 'react';
-import Link from 'next/link';
+import Link from 'next/link'
+import { HTMLProps } from 'react'
 
-interface CustomLinkProps {
-  href: string;
-  hNumber: 'H1' | 'H2' | 'H3';
-  isPass: boolean;
-  children: React.ReactNode;
+type LinkProps = {
+  href: string
+  children: React.ReactNode
+  hNumber: string
+  isPass: boolean
 }
 
-const CustomLink: React.FC<CustomLinkProps> = ({ href, hNumber, isPass, children }) => {
-  const baseStyle = 'block text-gray-800 hover:text-blue-600 transition-colors duration-200';
-  const headingStyles = {
-    H1: 'text-xl font-bold',
-    H2: 'text-lg font-semibold ml-4',
-    H3: 'text-md ml-8',
-  };
+const CustomLink = ({ href, children, hNumber, isPass }: LinkProps) => {
+  const foundHeaders = () => {
+    switch (hNumber) {
+      case 'H1':
+        return (
+          <Link data-active={isPass} href={href}>
+            {children}
+          </Link>
+        )
+      case 'H2':
+        return (
+          <Link data-active={isPass} style={{ marginLeft: '12px' }} href={href}>
+            {children}
+          </Link>
+        )
+      case 'H3':
+        return (
+          <Link data-active={isPass} style={{ marginLeft: '24px' }} href={href}>
+            {children}
+          </Link>
+        )
+      case 'H4':
+        return (
+          <Link data-active={isPass} style={{ marginLeft: '36px' }} href={href}>
+            {children}
+          </Link>
+        )
+    }
+  }
 
-  const activeStyle = 'text-blue-600 font-semibold';
-  const headingStyle = `${baseStyle} ${headingStyles[hNumber]} ${isPass ? activeStyle : ''}`;
+  return <>{foundHeaders()}</>
+}
 
-  return (
-    <Link href={href} passHref>
-      <p className={headingStyle}>
-        {children}
-      </p>
-    </Link>
-  );
-};
-
-export default CustomLink;
+export default CustomLink

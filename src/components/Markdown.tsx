@@ -7,6 +7,7 @@ import remarkGfm from "remark-gfm";
 import { PluggableList } from 'unified'
 import slug from 'rehype-slug'
 import Toc from '@/components/Toc';
+import raw from 'rehype-raw'
 
 
 const MarkdownRenderer = ({ content }: { content: string }) => {
@@ -15,6 +16,7 @@ const MarkdownRenderer = ({ content }: { content: string }) => {
     <>
       <ReactMarkdown
         remarkPlugins={[remarkGfm]}
+        rehypePlugins={[raw, slug] as PluggableList}
         components={{
           // 코드 블록을 커스텀 처리
           code({ node, inline, className, children, ...props }: any) {

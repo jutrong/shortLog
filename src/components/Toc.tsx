@@ -1,27 +1,27 @@
 'use client'
+
 import CustomLink from '@/components/CustomLink'
 import useObservation from '@/hooks/useObserver'
 import { useEffect, useState } from 'react'
 
 const TOC = () => {
+  // header에 있는 id값을 저장해둠.
   const [currentId, setCurrentId] = useState<string>('')
   const [headingEls, setHeadingEls] = useState<HTMLElement[]>([])
 
-
   useEffect(() => {
-    const headingElements: HTMLElement[] = Array.from(document.querySelectorAll('h1, h2, h3'))
+    const headingElements: HTMLElement[] = Array.from(document.querySelectorAll('h2, h3'))
     setHeadingEls(headingElements)
   }, [])
 
-  useObservation(setCurrentId, headingEls);
-  console.log(currentId)
+  useObservation(setCurrentId, headingEls)
+
   return (
     <>
       {headingEls?.map((heading, index) => {
-        const hNumber = heading.nodeName.toUpperCase() as 'H1' | 'H2' | 'H3';
         return (
           <CustomLink
-            hNumber={hNumber}
+            hNumber={heading.nodeName}
             isPass={heading.id === currentId}
             href={'#' + heading.id}
             key={`heading-${index}`}
