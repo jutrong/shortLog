@@ -9,8 +9,8 @@ import './post.css'
 const DetailPost = async ({ params }: any) => {
   const postData = await getPostData(params.slug);
   return (
-    <div className="w-full flex flex-col items-center text-black mb-20">
-      <div className="my-10 font-Seo w-[80%] ">
+    <div className="w-full flex flex-col items-start  text-black mb-20 ">
+      <div className=" my-10 font-Seo ">
         <div className='mb-8 cursor-pointer'>
           <Link href="/">
             <Image
@@ -29,15 +29,15 @@ const DetailPost = async ({ params }: any) => {
           })}
         </div>
       </div>
-      <div className="w-[85%] h-[1px] bg-primary opacity-20" />
-      <div className="w-[80%] mt-20 mb-32 font-Gowun leading-10 tracking-wide relative">
+      <div className=" h-[1px] bg-primary opacity-20 " />
+      <div className="w-[100%]  mt-20 mb-32 font-Gowun leading-10 tracking-wide relative flex flex-col items-start ">
         <div style={{ position: 'absolute', left: '100%' }}>
           <aside className='toc_aside'>
             <TOC />
           </aside>
         </div>
         <Markdown content={postData.blogPost.content}></Markdown>
-      </div>
+      </div >
       <div className='w-full'>
         <Giscus />
       </div>

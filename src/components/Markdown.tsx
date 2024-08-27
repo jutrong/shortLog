@@ -13,7 +13,7 @@ import raw from 'rehype-raw'
 const MarkdownRenderer = ({ content }: { content: string }) => {
 
   return (
-    <>
+    <div className='w-full'>
       <ReactMarkdown
         remarkPlugins={[remarkGfm]}
         rehypePlugins={[raw, slug] as PluggableList}
@@ -22,9 +22,9 @@ const MarkdownRenderer = ({ content }: { content: string }) => {
           code({ node, inline, className, children, ...props }: any) {
             const match = /language-(\w+)/.exec(className || '');
             return !inline && match ? (
-              <div className=' flex justify-center my-10'>
+              <div className='w-full flex justify-center my-10 '>
                 <SyntaxHighlighter
-                  className="border-2 border-gray-200 rounded-md w-[90%]"
+                  className="border-2 border-gray-200 rounded-md w-full "
                   style={coy} // 원하는 하이라이트 테마를 선택
                   language={match[1]}
                   PreTag="div"
@@ -46,7 +46,7 @@ const MarkdownRenderer = ({ content }: { content: string }) => {
       >
         {content}
       </ReactMarkdown>
-    </>
+    </div>
   );
 };
 
