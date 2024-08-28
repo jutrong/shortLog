@@ -6,6 +6,25 @@ import Giscus from '@/lib/Giscus';
 import TOC from '@/components/Toc';
 import './post.css'
 import Head from 'next/head';
+import { getMetadata } from '@/components/getMetaData';
+
+export async function generateMetadata({ params }: { params: { id: string, slug: string } }) {
+  // 예시로 게시물 ID를 기반으로 게시물 데이터를 가져옵니다.
+  const post = await getPostData(params.slug);
+
+  // 게시물 데이터가 존재하지 않으면 기본 메타데이터를 반환
+  if (!post) {
+    return getMetadata();
+  }
+
+  // 게시물 데이터를 기반으로 동적 메타데이터 생성
+  return getMetadata({
+    title: post.blogPost.title,
+    description: post.blogPost.subTitle,
+    ogImage: '/images/png/Kkobi.JPG',
+    asPath: `/posts/${post.blogPost.title}`,
+  });
+}
 
 const DetailPost = async ({ params }: any) => {
   const postData = await getPostData(params.slug);
