@@ -10,14 +10,17 @@ export const metadata: Metadata = {
   description: "라이프 발자국 남기기",
   icons: {
     icon: "/images/png/35658-8-rap.png"
-  }
+  },
 };
 
 export default function RootLayout({
   children,
+  posts
 }: Readonly<{
   children: React.ReactNode;
+  posts?: { title: string };
 }>) {
+
   return (
     <html lang="en">
       <head>
@@ -29,10 +32,23 @@ export default function RootLayout({
           content="JULOG"
         /> <meta
           property="og:title"
-          content="JULOG"
+          content={`JULOG ${posts?.title}`}
         />
         <meta property="og:description" content="블로그 놀러와 ~" />
         <meta property="og:image" content="/images/png/Kkobi.JPG" />
+
+        <meta property="og:url" content="https://julog.site" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="JULOG" />
+        <meta property="og:description" content="블로그 놀러와 ~" />
+        <meta property="og:image" content="https://julog.site/images/png/Kkobi.JPG" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta property="twitter:domain" content="julog.site" />
+        <meta property="twitter:url" content="https://julog.site" />
+        <meta name="twitter:title" content="JULOG" />
+        <meta name="twitter:description" content="블로그 놀러와 ~" />
+        <meta name="twitter:image" content="https://julog.site/images/png/Kkobi.JPG" />
       </head>
       <body className={inter.className}>
         <div className="flex flex-col items-center ">
