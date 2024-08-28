@@ -29,8 +29,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="flex flex-col items-center ">
-          <div className="w-[50%] flex flex-col items-center  lg:w-[80%] sm:w-[100%]  ">
+        <div className="flex flex-col items-center">
+          <div className="w-[50%] flex flex-col items-center lg:w-[100%] sm:w-[100%]">
             <Header />
             {children}
           </div>

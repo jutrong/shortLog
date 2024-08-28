@@ -13,7 +13,7 @@ import raw from 'rehype-raw'
 const MarkdownRenderer = ({ content }: { content: string }) => {
 
   return (
-    <div className='w-full text-[15px] sm:text[13px]'>
+    <div className='w-full text-[15px] sm:text-[13px]'>
       <ReactMarkdown
         remarkPlugins={[remarkGfm]}
         rehypePlugins={[raw, slug] as PluggableList}
