@@ -30,7 +30,7 @@ const DetailPost = async ({ params }: any) => {
         </div>
       </div>
       <div className=" h-[1px] bg-primary opacity-20 " />
-      <div className="w-[100%]  mt-20 mb-32 font-Gowun leading-10 tracking-wide relative flex flex-col items-start ">
+      <div className="w-[85%]  mt-20 mb-32 font-Gowun leading-10 tracking-wide relative flex flex-col items-start ">
         <div style={{ position: 'absolute', left: '100%' }}>
           <aside className='toc_aside'>
             <TOC />

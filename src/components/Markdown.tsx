@@ -13,7 +13,7 @@ import raw from 'rehype-raw'
 const MarkdownRenderer = ({ content }: { content: string }) => {
 
   return (
-    <div className='w-full'>
+    <div className='w-full text-[15px] sm:text[13px]'>
       <ReactMarkdown
         remarkPlugins={[remarkGfm]}
         rehypePlugins={[raw, slug] as PluggableList}
@@ -24,12 +24,12 @@ const MarkdownRenderer = ({ content }: { content: string }) => {
             return !inline && match ? (
               <div className='w-full flex justify-center my-10 '>
                 <SyntaxHighlighter
-                  className="border-2 border-gray-200 rounded-md w-full "
+                  className="border-2 border-gray-200 rounded-md w-full  "
                   style={coy} // 원하는 하이라이트 테마를 선택
                   language={match[1]}
                   PreTag="div"
                   showLineNumbers
-                  customStyle={{ paddingTop: '30px', paddingBottom: '30px' }}
+                  customStyle={{ paddingTop: '30px', paddingBottom: '30px', fontSize: '13px' }}
                   {...props}
                 >
                   {String(children).replace(/\n$/, '')}

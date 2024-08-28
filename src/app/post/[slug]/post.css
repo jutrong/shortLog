@@ -1,10 +1,11 @@
 .toc_aside {
   position: fixed;
+  top: 30%;
   width: 340px;
   display: flex;
   padding-left: 10px;
   flex-direction: column;
-  margin-left: 140px;
+  margin-left: 240px;
   border-left: 2px solid #f1f3f5;
 }
 
