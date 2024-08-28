@@ -11,6 +11,13 @@ export const metadata: Metadata = {
   icons: {
     icon: "/images/png/35658-8-rap.png"
   },
+  openGraph: {
+    type: "website",
+    url: "https://julog.site",
+    title: "J-U-L-O-G",
+    description: "라이프 발자국 남기기",
+    images: "/images/png/Kkobi.JPG",
+  },
 };
 
 export default function RootLayout({
@@ -21,34 +28,6 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <head>
-        <meta property="og:title" content="JULOG" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta property="og:type" content="website" />
-        <meta
-          property="og:site_name"
-          content="JULOG"
-        />
-        <meta
-          property="og:title"
-          content={`JULOG`}
-        />
-        <meta property="og:description" content="블로그 놀러와 ~" />
-        <meta property="og:image" content="/images/png/Kkobi.JPG" />
-
-        <meta property="og:url" content="https://julog.site" />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="JULOG" />
-        <meta property="og:description" content="블로그 놀러와 ~" />
-        <meta property="og:image" content="https://julog.site/images/png/Kkobi.JPG" />
-
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta property="twitter:domain" content="julog.site" />
-        <meta property="twitter:url" content="https://julog.site" />
-        <meta name="twitter:title" content="JULOG" />
-        <meta name="twitter:description" content="블로그 놀러와 ~" />
-        <meta name="twitter:image" content="https://julog.site/images/png/Kkobi.JPG" />
-      </head>
       <body className={inter.className}>
         <div className="flex flex-col items-center ">
           <div className="w-[50%] flex flex-col items-center  lg:w-[80%] sm:w-[100%]  ">
