@@ -15,10 +15,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-  posts
 }: Readonly<{
   children: React.ReactNode;
-  posts?: { title: string };
 }>) {
 
   return (
@@ -30,9 +28,10 @@ export default function RootLayout({
         <meta
           property="og:site_name"
           content="JULOG"
-        /> <meta
+        />
+        <meta
           property="og:title"
-          content={`JULOG ${posts?.title}`}
+          content={`JULOG`}
         />
         <meta property="og:description" content="블로그 놀러와 ~" />
         <meta property="og:image" content="/images/png/Kkobi.JPG" />
