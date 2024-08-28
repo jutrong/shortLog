@@ -8,7 +8,7 @@ export const META = {
     '책',
     '사진',
   ],
-  url: 'https://www.julog.site',
+  url: 'https://julog.site',
   googleVerification: 'xxx',
   naverVerification: 'xxx',
   ogImage: '/images/png/Kkobi.JPG',
