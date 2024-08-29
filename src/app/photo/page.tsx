@@ -38,8 +38,8 @@ const Photo = () => {
               animate={{ x: "-200%" }}
               transition={{
                 repeat: Infinity,
-                duration: 50,
-                ease: "circIn",
+                duration: 40,
+                ease: "linear",
               }}
             >
               <div className=" w-full  flex ">
