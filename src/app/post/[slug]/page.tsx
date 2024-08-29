@@ -49,7 +49,7 @@ const DetailPost = async ({ params }: any) => {
         <meta property="og:image" content='/images/png/Kkobi.JPG' />
       </Head>
 
-      <div className="w-full flex flex-col items-center text-black mb-20 sm:w-[88%] ">
+      <div className="w-[50%] flex flex-col items-center text-black mb-20 sm:w-[100%] lg:w-[100%] sm:px-3   ">
         <div className=" my-10 font-Seo sm:mx-4 ">
           <div className='mb-8 cursor-pointer'>
             <Link href="/">
@@ -70,7 +70,7 @@ const DetailPost = async ({ params }: any) => {
           </div>
         </div>
         <div className=" h-[1px] bg-primary opacity-20 " />
-        <div className="w-[80%] lg:w-[90%] sm:w-[95%] mt-20 mb-32 font-Gowun leading-10 tracking-wide relative flex flex-col items-center justify-center">
+        <div className="w-[80%] lg:w-[90%] sm:w-[100%] mt-20 mb-32 font-Gowun leading-10 tracking-wide relative flex flex-col items-center justify-center">
           <div style={{ position: 'absolute', left: '100%' }}>
             <aside className='toc_aside'>
               <TOC />

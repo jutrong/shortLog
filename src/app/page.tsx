@@ -8,7 +8,7 @@ export default function Home() {
 
 
   return (
-    <main className="w-full h-full flex flex-col justify-center py-10 text-black font-Seo">
+    <main className="w-[50%]  h-full flex flex-col justify-center py-10 text-black font-Seo lg:w-[100%] sm:w-[100%]">
       <Tags tags={tags} />
       <PostList posts={posts} />
     </main >

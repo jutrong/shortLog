@@ -30,7 +30,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <div className="flex flex-col items-center">
-          <div className="w-[50%] flex flex-col items-center lg:w-[100%] sm:w-[100%]">
+          <div className="w-full flex flex-col items-center ">
             <Header />
             {children}
           </div>
