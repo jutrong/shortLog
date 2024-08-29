@@ -49,8 +49,8 @@ const DetailPost = async ({ params }: any) => {
         <meta property="og:image" content='/images/png/Kkobi.JPG' />
       </Head>
 
-      <div className="w-full flex flex-col items-center text-black mb-20 ">
-        <div className=" my-10 font-Seo ">
+      <div className="w-full flex flex-col items-center text-black mb-20 sm:w-[88%] ">
+        <div className=" my-10 font-Seo sm:mx-4 ">
           <div className='mb-8 cursor-pointer'>
             <Link href="/">
               <Image

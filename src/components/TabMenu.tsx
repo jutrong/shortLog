@@ -7,9 +7,9 @@ interface TabMenuProps {
 
 const TabMenu = ({ activeTab, setActiveTab }: TabMenuProps) => {
   return (
-    <div className="w-full flex items-center gap-10 text-xl  pb-2 mt-14 mb-10 h-10 border-b border-gray-300 relative">
+    <div className="w-full flex items-center gap-10 text-xl  pb-2 mt-14 mb-10 h-10 border-b border-gray-300 relative sm:text-[17px]">
       <div
-        className={`w-20 text-center cursor-pointer ${activeTab === '전체' ? 'text-black border-b-2 border-black' : 'text-gray-400'} pb-2`}
+        className={`w-20 text-center cursor-pointer ${activeTab === '전체' ? 'text-black border-b-2 border-black' : 'text-gray-400'} pb-2 `}
         onClick={() => setActiveTab('전체')}
         style={{ position: 'relative', bottom: '-6px' }}
       >
