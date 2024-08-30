@@ -38,7 +38,7 @@ const Photo = () => {
               animate={{ x: "-200%" }}
               transition={{
                 repeat: Infinity,
-                duration: 40,
+                duration: 30,
                 ease: "linear",
               }}
             >

@@ -1,6 +1,6 @@
 ---
  id: "1"
- title: "너 tanstack query 왜 사용하는거니?"
+ title: "Tanstack query 왜 사용하는거야 ?"
  subTitle: "요즘은 상태관리를 클라이언트 상태관리와 서버 상태관리를 분리하여 관리하는 프로젝트가 많이 보이고 있다. 전역 상태관리는 우리가 흔히 알고있는 라이브러리이다. Redux, Recoil, Zustand, MobX etc.. 익히 들어본 라이브러리명일 것이다. 그러면 서버 상태라는 것은 무엇이고, 왜 서버 상태를 따로 관리하는 것일까?"
  tags: ["Tanstack-query"]
  tabMenu: "개발"
