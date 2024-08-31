@@ -65,30 +65,25 @@ export const LIST = [
   }
 
 ]
-
 export const kyotoImages = [
-  "/images/png/kyoto1.jpeg",
-  "/images/png/kyoto2.jpeg",
-  "/images/png/kyoto3.jpeg",
-  "/images/png/kyoto4.jpeg",
-  "/images/png/kyoto5.jpeg",
-  "/images/png/kyoto6.jpeg",
-  "/images/png/kyoto7.jpeg",
-  // "/images/png/kyoto9.jpeg",
-  "/images/png/kyoto10.jpeg",
-  "/images/png/kyoto12.jpeg",
-  // "/images/png/kyoto13.jpeg",
-  // "/images/png/kyoto11.jpeg",
-  // "/images/png/kyoto8.jpeg",
-  // "/images/png/kyoto14.jpeg",
-  "/images/png/kyoto15.jpeg",
-  "/images/png/kyoto16.jpeg",
-]
+  { id: 1, imageSrc: "/images/png/kyoto1.jpeg" },
+  { id: 2, imageSrc: "/images/png/kyoto2.jpeg" },
+  { id: 3, imageSrc: "/images/png/kyoto3.jpeg" },
+  { id: 4, imageSrc: "/images/png/kyoto4.jpeg" },
+  { id: 5, imageSrc: "/images/png/kyoto5.jpeg" },
+  { id: 6, imageSrc: "/images/png/kyoto6.jpeg" },
+  { id: 7, imageSrc: "/images/png/kyoto7.jpeg" },
+  { id: 8, imageSrc: "/images/png/kyoto10.jpeg" },
+  { id: 9, imageSrc: "/images/png/kyoto12.jpeg" },
+  { id: 10, imageSrc: "/images/png/kyoto15.jpeg" },
+  { id: 11, imageSrc: "/images/png/kyoto16.jpeg" },
+];
 
 export const ulsanImages = [
-  "/images/png/ulsan1.jpeg",
-  "/images/png/ulsan2.jpeg",
-  "/images/png/ulsan3.jpeg",
-  "/images/png/ulsan4.jpeg",
-  "/images/png/ulsan5.jpeg",
-]
+  { id: 1, imageSrc: "/images/png/ulsan1.jpeg" },
+  { id: 2, imageSrc: "/images/png/ulsan2.jpeg" },
+  { id: 3, imageSrc: "/images/png/ulsan3.jpeg" },
+  { id: 4, imageSrc: "/images/png/ulsan4.jpeg" },
+  { id: 5, imageSrc: "/images/png/ulsan5.jpeg" },
+];
+
