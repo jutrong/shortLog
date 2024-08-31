@@ -18,6 +18,8 @@ const config: Config = {
         UhBeeSe: ["UhBeeSe", "sans-serif"],
         Seo: ["Seo"],
         Gowun: ["Gowun"],
+        Rixfont: ["Rixfont"],
+        SFHAM: ["SFHAM"],
       },
       screens: {
         "2xl": { max: "1535px" },

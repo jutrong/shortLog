@@ -122,6 +122,17 @@ pre [data-line] {
   font-style: normal;
   src: url("/fonts/GowunDodum-Regular") format("ttf");
 }
+@font-face {
+  font-family: "Rixfont";
+  font-style: normal;
+  src: url("/fonts/Rixfont") format("otf");
+}
+
+@font-face {
+  font-family: "SFHAM";
+  font-style: normal;
+  src: url("/fonts/SFHAM") format("ttf");
+}
 
 .linenumber {
   font-size: 8px;

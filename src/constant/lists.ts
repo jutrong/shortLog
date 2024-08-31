@@ -65,3 +65,30 @@ export const LIST = [
   }
 
 ]
+
+export const kyotoImages = [
+  "/images/png/kyoto1.jpeg",
+  "/images/png/kyoto2.jpeg",
+  "/images/png/kyoto3.jpeg",
+  "/images/png/kyoto4.jpeg",
+  "/images/png/kyoto5.jpeg",
+  "/images/png/kyoto6.jpeg",
+  "/images/png/kyoto7.jpeg",
+  // "/images/png/kyoto9.jpeg",
+  "/images/png/kyoto10.jpeg",
+  "/images/png/kyoto12.jpeg",
+  // "/images/png/kyoto13.jpeg",
+  // "/images/png/kyoto11.jpeg",
+  // "/images/png/kyoto8.jpeg",
+  // "/images/png/kyoto14.jpeg",
+  "/images/png/kyoto15.jpeg",
+  "/images/png/kyoto16.jpeg",
+]
+
+export const ulsanImages = [
+  "/images/png/ulsan1.jpeg",
+  "/images/png/ulsan2.jpeg",
+  "/images/png/ulsan3.jpeg",
+  "/images/png/ulsan4.jpeg",
+  "/images/png/ulsan5.jpeg",
+]
