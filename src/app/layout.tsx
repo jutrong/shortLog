@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import './global.css';
 import Header from "@/components/Header";
+import GoogleAnalytics from "@/components/ga/google-analytics";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -29,6 +30,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+        {process.env.NEXT_PUBLIC_GA_ID ? <GoogleAnalytics /> :
+          <div>GA환경변수값필요</div>
+
+        }
         <div className="flex flex-col items-center">
           <div className="w-full flex flex-col items-center ">
             <Header />
