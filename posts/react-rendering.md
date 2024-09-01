@@ -95,7 +95,8 @@ React는 대규모 SPA와 다이나믹 UI의 웹 페이지를 만들기 위해�
 
 constructor는 컴포넌트의 생성자 메서드. 컴포넌트가 만들어지면 가장 먼저 실행되는 메서드이다. 
 이 메서드에서는 초기 state를 정할 수 있다.
-```
+
+```jsx
 // constructor 기본 구조
 class MyComponent() extends React.Component{
   constructor(props){
@@ -111,7 +112,8 @@ class MyComponent() extends React.Component{
 
 getDerivedStateFromProps 는 props 로 받아온 것을 state 에 넣어주고 싶을 때 사용한다. 컴포넌트가 마운트 될 때와 업데이트 될 때 호출
 다른 생명주기 메서드와는 달리 앞에 static을 필요로 하고, 이 안에서는 this 롤 조회 할 수 없다.
-```
+
+```jsx
 class Example extends React.Component {
 	static getDerivedStateFromProps(nextProps, prevState) {
       if (nextProps.value !== prevState.value) {
