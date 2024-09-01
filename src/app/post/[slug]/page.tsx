@@ -50,7 +50,7 @@ const DetailPost = async ({ params }: any) => {
       </Head>
 
       <div className="w-[50%] flex flex-col items-center text-black mb-20 sm:w-[100%] lg:w-[100%] sm:px-3   ">
-        <div className=" my-10 font-Seo sm:mx-4 ">
+        <div className="w-[80%] my-10 font-Seo sm:mx-4">
           <div className='mb-8 cursor-pointer'>
             <Link href="/">
               <Image

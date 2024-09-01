@@ -29,7 +29,7 @@ const PostList = ({ posts }: PostListProps) => {
       <TabMenu activeTab={activeTab} setActiveTab={setActiveTab} />
       {
         filteredPosts.map((post, index) => (
-          <Link href={`/post/${post.id}`}>
+          <Link href={`/post/${post.id}`} key={post.id}>
             <PostItem key={post.date + index} post={post} />
           </Link>
         ))
