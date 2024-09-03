@@ -14,6 +14,9 @@ const config: Config = {
         red: "#2E87FF",
         primary: "#19194d",
       },
+      boxShadow: {
+        sliderShadow: '0 2px 0 #000'
+      },
       fontFamily: {
         UhBeeSe: ["UhBeeSe", "sans-serif"],
         Seo: ["Seo"],

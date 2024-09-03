@@ -32,7 +32,6 @@ export default function RootLayout({
       <body className={inter.className}>
         {process.env.NEXT_PUBLIC_GA_ID ? <GoogleAnalytics /> :
           <div>GA환경변수값필요</div>
-
         }
         <div className="flex flex-col items-center">
           <div className="w-full flex flex-col items-center ">

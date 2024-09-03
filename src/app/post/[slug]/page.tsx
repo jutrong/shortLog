@@ -7,6 +7,9 @@ import TOC from '@/components/Toc';
 import './post.css'
 import Head from 'next/head';
 import { getMetadata } from '@/components/getMetaData';
+import ToggleSwitch from '@/components/toggle';
+import Switch from '@/components/toggle';
+import { useState } from 'react';
 
 export async function generateMetadata({ params }: { params: { id: string, slug: string } }) {
   // 예시로 게시물 ID를 기반으로 게시물 데이터를 가져옵니다.
@@ -27,6 +30,8 @@ export async function generateMetadata({ params }: { params: { id: string, slug:
 }
 
 const DetailPost = async ({ params }: any) => {
+  // const [isToggled, setToggled] = useState(false);
+
   const postData = await getPostData(params.slug);
   return (
     <>
@@ -50,8 +55,8 @@ const DetailPost = async ({ params }: any) => {
       </Head>
 
       <div className="w-[50%] flex flex-col items-center text-black mb-20 sm:w-[100%] lg:w-[100%] sm:px-3   ">
-        <div className="w-[80%] my-10 font-Seo sm:mx-4">
-          <div className='mb-8 cursor-pointer'>
+        <div className="w-[80%] my-10 font-Seo sm:mx-4 ">
+          <div className='mb-8 cursor-pointer flex items-center justify-between '>
             <Link href="/">
               <Image
                 src="/arrow-left.svg"
@@ -60,6 +65,9 @@ const DetailPost = async ({ params }: any) => {
                 height={30}
               />
             </Link>
+            <div className="p-5">
+              {/* <Switch isChecked={isToggled} onChange={setToggled} /> */}
+            </div>
           </div>
           <h1 className="text-[40px] font-bold pt-4 sm:text-[26px]">{postData.blogPost.title}</h1>
           <div className="ml-2 mt-2 flex items-center gap-5">
