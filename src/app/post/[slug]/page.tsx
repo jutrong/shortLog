@@ -30,7 +30,6 @@ export async function generateMetadata({ params }: { params: { id: string, slug:
 }
 
 const DetailPost = async ({ params }: any) => {
-  // const [isToggled, setToggled] = useState(false);
 
   const postData = await getPostData(params.slug);
   return (
@@ -65,9 +64,7 @@ const DetailPost = async ({ params }: any) => {
                 height={30}
               />
             </Link>
-            <div className="p-5">
-              {/* <Switch isChecked={isToggled} onChange={setToggled} /> */}
-            </div>
+            <Switch />
           </div>
           <h1 className="text-[40px] font-bold pt-4 sm:text-[26px]">{postData.blogPost.title}</h1>
           <div className="ml-2 mt-2 flex items-center gap-5">

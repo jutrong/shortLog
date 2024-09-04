@@ -1,24 +1,26 @@
-import React from 'react';
+'use client'
+import React, { useState } from 'react';
 
-interface SwitchProps {
-  isChecked: boolean;
-  onChange: (checked: boolean) => void;
-}
+const Switch = () => {
+  const [language, setLanguage] = useState('ko');
 
-const Switch: React.FC<SwitchProps> = ({ isChecked, onChange }) => {
+  const toggleLanguage = () => {
+    setLanguage(prev => prev === 'ko' ? 'jp' : 'ko');
+  };
+
   return (
-    <label className="relative inline-block w-8 h-4 align-middle select-none transition duration-200 ease-in">
-      <input
-        type="checkbox"
-        className="absolute opacity-0 w-0 h-0"
-        checked={isChecked}
-        onChange={(e) => onChange(e.target.checked)}
-      />
-      <span
-        className={`slider block w-8 h-4 rounded-full bg-gray-300 before:absolute before:content-[''] before:top-0.5 before:left-0.5 before:bg-white before:border-2 before:border-black before:h-3.5 before:w-3.5 before:rounded-full before:shadow-sliderShadow transition-all duration-200 ease-in-out ${isChecked ? 'bg-blue-500 before:translate-x-4' : ''
-          }`}
-      ></span>
-    </label>
+    <div className="p-5">
+      <div className="flex items-center space-x-3">
+        <span className={`${language === 'ko' ? 'font-bold' : 'opacity-40'}`}>한국어</span>
+        <button
+          onClick={toggleLanguage}
+          className="relative inline-flex items-center h-6 rounded-full w-11 bg-gray-300 transition-colors duration-200 ease-in-out focus:outline-none"
+        >
+          <span className={`inline-block w-4 h-4 transform transition ease-in-out duration-200 bg-white rounded-full shadow ${language === 'jp' ? 'translate-x-6' : 'translate-x-1'}`} />
+        </button>
+        <span className={`${language === 'jp' ? 'font-bold' : 'opacity-40'}`}>日本語</span>
+      </div>
+    </div>
   );
 };
 
