@@ -15,13 +15,14 @@ import '../styles/toc.css'
 
 const postsDirectory = path.join(process.cwd(), 'posts');
 
-export function getSortedPostsData() {
-  const fileNames = fs.readdirSync(postsDirectory);
+export function getSortedPostsData(language: 'ko' | 'jp') {
+  const languageDirectory = path.join(postsDirectory, language);
+  const fileNames = fs.readdirSync(languageDirectory);
 
   const allPostsData = fileNames.map((fileName) => {
     const id = fileName.replace(/\.md$/, '');
 
-    const fullPath = path.join(postsDirectory, fileName);
+    const fullPath = path.join(languageDirectory, fileName);
     const fileContents = fs.readFileSync(fullPath, 'utf8');
 
     
@@ -44,8 +45,8 @@ export function getSortedPostsData() {
   return allPostsData.sort((a, b) => (a.date < b.date ? 1 : -1)); // 내림차순
 }
 
-export async function getPostData(id:string) {
-  const fullPath = path.join(postsDirectory, `${id}.md`);
+export async function getPostData(id:string,language: 'ko' | 'jp') {
+  const fullPath = path.join(postsDirectory, language,`${id}.md`);
   const fileContents = fs.readFileSync(fullPath, 'utf8');
   const matterResult = matter(fileContents);
   

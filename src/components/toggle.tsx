@@ -1,11 +1,16 @@
 'use client'
 import React, { useState } from 'react';
 
-const Switch = () => {
+interface SwitchProps {
+  onLanguageChange: (language: 'ko' | 'jp') => void;
+}
+const Switch = ({ onLanguageChange }: SwitchProps) => {
   const [language, setLanguage] = useState('ko');
 
   const toggleLanguage = () => {
-    setLanguage(prev => prev === 'ko' ? 'jp' : 'ko');
+    const newLanguage = language === 'ko' ? 'jp' : 'ko';
+    setLanguage(newLanguage);
+    onLanguageChange(newLanguage);
   };
 
   return (

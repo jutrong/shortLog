@@ -1,34 +1,32 @@
-'use client';
-
 import PostItem from "@/components/PostItem";
 import TabMenu from "@/components/TabMenu";
+import Switch from "@/components/toggle";
+import { getSortedPostsData } from "@/lib/posts";
 import Link from "next/link";
-import { useState } from "react";
 
-interface PostListProps {
-  posts: {
-    id: string;
-    title: string;
-    subTitle: string;
-    tags: string[];
-    tabMenu: string;
-    date: string;
-  }[];
+export interface Post {
+  id: string;
+  title: any;
+  subTitle: any;
+  tabMenu: any;
+  date: any;
+  tags: any;
+  content: string;
 }
 
-const PostList = ({ posts }: PostListProps) => {
-  const [activeTab, setActiveTab] = useState('전체');
-  const filteredPosts = posts.filter((post) => activeTab === '전체' || post.tabMenu === activeTab);
+interface PostListProps {
+  allPosts: Post[];
+}
+// TODO : tabmenu
+const PostList = ({ allPosts }: PostListProps) => {
 
-  const selectTab = (tabName: string) => {
-    setActiveTab(tabName);
-  };
 
   return (
     <>
-      <TabMenu activeTab={activeTab} setActiveTab={setActiveTab} />
+      {/* <Switch onLanguageChange={handleLanguageChange} /> */}
+      <TabMenu allPosts={allPosts} />
       {
-        filteredPosts.map((post, index) => (
+        allPosts.map((post, index) => (
           <Link href={`/post/${post.id}`} key={post.id}>
             <PostItem key={post.date + index} post={post} />
           </Link>

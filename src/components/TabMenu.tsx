@@ -1,11 +1,20 @@
+'use client'
+import { Post } from '@/components/PostList';
 import { Dispatch, SetStateAction, useState } from 'react';
 
 interface TabMenuProps {
-  activeTab: string;
-  setActiveTab: Dispatch<SetStateAction<string>>;
+  allPosts: Post[];
 }
 
-const TabMenu = ({ activeTab, setActiveTab }: TabMenuProps) => {
+const TabMenu = ({ allPosts }: TabMenuProps) => {
+  const [activeTab, setActiveTab] = useState('전체');
+  const filteredPosts = allPosts.filter((post) => activeTab === '전체' || post.tabMenu === activeTab);
+
+  const selectTab = (tabName: string) => {
+    setActiveTab(tabName);
+  };
+
+
   return (
     <div className="w-full flex items-center gap-10 text-xl  pb-2 mt-14 mb-10 h-10 border-b border-gray-300 relative sm:text-[17px]">
       <div
