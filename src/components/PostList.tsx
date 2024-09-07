@@ -15,18 +15,16 @@ export interface Post {
 }
 
 interface PostListProps {
-  allPosts: Post[];
+  koPosts: Post[];
 }
 // TODO : tabmenu
-const PostList = ({ allPosts }: PostListProps) => {
-
-
+const PostList = ({ koPosts }: PostListProps) => {
   return (
     <>
       {/* <Switch onLanguageChange={handleLanguageChange} /> */}
-      <TabMenu allPosts={allPosts} />
+      <TabMenu allPosts={koPosts} />
       {
-        allPosts.map((post, index) => (
+        koPosts.map((post, index) => (
           <Link href={`/post/${post.id}`} key={post.id}>
             <PostItem key={post.date + index} post={post} />
           </Link>
