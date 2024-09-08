@@ -39,7 +39,7 @@ const ClientDetailPost: React.FC<ClientDetailPostProps> = ({ koPostData, jpPostD
         <h1 className="text-[40px] font-bold pt-4 sm:text-[26px]">{postData.blogPost.title}</h1>
         <div className="ml-2 mt-2 flex items-center gap-5">
           <p className="opacity-80 sm:text-[12px]">{postData.blogPost.date}</p>
-          {postData.blogPost.tags.map((tag: string, index: number) => (
+          {postData?.blogPost?.tags.map((tag: string, index: number) => (
             <p key={index} className="text-[14px] font-[500] sm:text-[12px]">{tag}</p>
           ))}
         </div>
